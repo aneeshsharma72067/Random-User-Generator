@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Use Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1>Generate a random User</h1>
+        <div id="main">
+            <img :class="gender" v-bind:src="picture" :alt="`${firstName} ${lastName}`">
+            <h1>{{firstName}} {{lastName}}</h1>
+            <h3><span class="primary_text">Email</span> : {{email}}</h3>
+            <h3><span class="primary_text">Phone Number</span> : {{phone}}</h3>
+            <h3><span class="primary_text">Age</span> : {{age}}</h3>
+            <button :class="gender" v-on:click="getUser()">Get Random User</button>
+        </div>
+       
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
